@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f2f3ff",
+                    "primary-container": "#dde1ff",
+                    "on-surface": "#113069",
+                    "tertiary-fixed": "#e9ddff",
+                    "primary-fixed-dim": "#cad2ff",
+                    "on-secondary-fixed": "#324054",
+                    "secondary-container": "#d5e3fd",
+                    "background": "#faf8ff",
+                    "on-tertiary-fixed-variant": "#605773",
+                    "primary-dim": "#2848b7",
+                    "on-secondary-container": "#455367",
+                    "surface-tint": "#3755c3",
+                    "surface": "#faf8ff",
+                    "on-primary-fixed-variant": "#3352c0",
+                    "error-container": "#ff8b9a",
+                    "secondary": "#526075",
+                    "on-background": "#113069",
+                    "on-primary-container": "#2747b6",
+                    "on-primary-fixed": "#0732a3",
+                    "surface-variant": "#d9e2ff",
+                    "error": "#9e3f4e",
+                    "tertiary-fixed-dim": "#dbcff0",
+                    "secondary-fixed": "#d5e3fd",
+                    "primary-fixed": "#dde1ff",
+                    "inverse-primary": "#6d89fa",
+                    "on-error-container": "#782232",
+                    "on-primary": "#f8f7ff",
+                    "surface-container-high": "#e2e7ff",
+                    "outline-variant": "#98b1f2",
+                    "outline": "#6079b7",
+                    "tertiary-container": "#e9ddff",
+                    "secondary-dim": "#465469",
+                    "inverse-on-surface": "#959cb5",
+                    "on-tertiary-fixed": "#433b55",
+                    "error-dim": "#4f0116",
+                    "tertiary": "#635b77",
+                    "on-surface-variant": "#445d99",
+                    "inverse-surface": "#060e20",
+                    "tertiary-dim": "#574f6a",
+                    "on-tertiary": "#fdf7ff",
+                    "surface-dim": "#cdd9ff",
+                    "surface-container-highest": "#d9e2ff",
+                    "on-secondary": "#f8f8ff",
+                    "on-tertiary-container": "#564d69",
+                    "surface-bright": "#faf8ff",
+                    "surface-container": "#eaedff",
+                    "on-error": "#fff7f7",
+                    "on-secondary-fixed-variant": "#4e5c71",
+                    "primary": "#3755c3",
+                    "secondary-fixed-dim": "#c7d5ee"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="text-xl font-semibold tracking-tighter text-blue-900">Syntelix</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 font-medium border-b-2 border-blue-700 pb-1" href="#soluciones">Solutions</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors" href="#metodologia">Methodology</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors" href="#">Systems</a>
+<a class="text-slate-600 hover:text-blue-900 transition-colors" href="#syntelix">About</a>
+</div>
+<button onclick="location.href='#contacto'" class="bg-primary text-on-primary px-5 py-2.5 rounded-DEFAULT font-medium text-sm transition-transform scale-95 active:opacity-80">
+                Contacto
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<h1 class="text-5xl lg:text-7xl font-bold text-on-surface tracking-tight leading-tight mb-8">
+                    Su negocio merece un <span class="text-primary italic">sistema propio.</span>
+</h1>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl">
+                    Desarrollamos sistemas de gestión diseñados para la realidad de las pequeñas y medianas empresas. Sin complicaciones, sin tecnicismos — solo orden y control.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-DEFAULT font-semibold tracking-tight transition-all hover:brightness-110">
+                        Comenzar ahora
+                    </button>
+<button class="flex items-center gap-2 text-primary font-semibold px-8 py-4 hover:bg-surface-container-low transition-colors rounded-DEFAULT">
+<span class="material-symbols-outlined">play_circle</span>
+                        Ver cómo funciona
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square bg-surface-container rounded-xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover opacity-90" data-alt="Modern minimalist office workspace with high-end laptop showing clean data dashboard in soft daylight with blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN63u_obkNVAIwJMPKcvBpIswTtmYO37dZly79m9rk8euoQyuPmPfxL6dj0SauGzJhxY21o2PSiyInqSTcZ5C4FFzMysUirhP2UuMqLhUxuo3PagnNNI7pT-TxfvZ9xWD1Ep9OMNBsExQ103G8ZUjNFfQLEBzi43hi5rnMA9brtc3QJWgEPu8wyL9X0t3uJfHvV3MamibRoR5Skyz0yjPIJAgwSsNArUwOuFqBjPoROxNhPIR9l_VJy2abfhsxUGpOvcQkYR4J8UU"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -left-6 w-48 h-48 bg-primary-container/30 rounded-xl -z-10 blur-2xl"></div>
+</div>
+</div>
+</section>
+<!-- Stats Section (Asymmetric Precision) -->
+<section class="py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-primary mb-1">100%</span>
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Sistemas a medida</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-primary mb-1">Pyme</span>
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Pensado para su escala</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-primary mb-1">Fácil</span>
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Sin tecnicismos</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-primary mb-1">Chile</span>
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Empresa local</span>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-24 px-8" id="soluciones">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-3xl lg:text-4xl font-bold text-on-surface tracking-tight mb-4">¿Cuánto tiempo pierde su negocio cada día?</h2>
+<div class="w-20 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm border-b-2 border-transparent hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">assignment_late</span>
+<h3 class="text-xl font-bold text-on-surface mb-4">Pedidos sin control</h3>
+<p class="text-on-surface-variant leading-relaxed">Olvídese de las notas en papel o chats de WhatsApp perdidos. Un flujo digital impecable desde la recepción hasta la entrega.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm border-b-2 border-transparent hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">schedule</span>
+<h3 class="text-xl font-bold text-on-surface mb-4">Tiempo perdido en coordinación</h3>
+<p class="text-on-surface-variant leading-relaxed">Reduzca las reuniones interminables. Toda la información necesaria para que su equipo opere con autonomía.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm border-b-2 border-transparent hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">query_stats</span>
+<h3 class="text-xl font-bold text-on-surface mb-4">Sin información para decidir</h3>
+<p class="text-on-surface-variant leading-relaxed">¿Cuál es su producto más rentable? ¿Quiénes son sus mejores clientes? Obtenga reportes claros y accionables.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solution Section (Process steps) -->
+<section class="py-24 bg-surface-container px-8" id="metodologia">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-bold text-on-surface tracking-tight">Un sistema hecho para su negocio</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 relative">
+<!-- Connector lines (Desktop) -->
+<div class="hidden lg:block absolute top-12 left-1/4 right-1/4 h-px bg-outline-variant opacity-30"></div>
+<div class="relative flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary text-2xl font-bold shadow-md mb-6 z-10">01</div>
+<h4 class="text-xl font-bold mb-3">Lo escuchamos</h4>
+<p class="text-on-surface-variant">Entendemos sus procesos actuales, sus cuellos de botella y sus metas a corto plazo.</p>
+</div>
+<div class="relative flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary text-2xl font-bold shadow-md mb-6 z-10">02</div>
+<h4 class="text-xl font-bold mb-3">Desarrollamos</h4>
+<p class="text-on-surface-variant">Creamos la herramienta perfecta, eliminando todo lo que sobra y potenciando lo que importa.</p>
+</div>
+<div class="relative flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary text-2xl font-bold shadow-md mb-6 z-10">03</div>
+<h4 class="text-xl font-bold mb-3">Lo acompañamos</h4>
+<p class="text-on-surface-variant">Instalación, capacitación de personal y soporte constante. Nunca estará solo con el software.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Systems Section (Bento-ish Grid) -->
+<section class="py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-3xl font-bold text-on-surface tracking-tight mb-2">Nuestros sistemas</h2>
+<p class="text-on-surface-variant">Soluciones base personalizables según su industria.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Featured Card -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl overflow-hidden group shadow-sm">
+<div class="aspect-[16/9] relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional sewing workshop with organized fabric rolls and modern equipment in a bright industrial studio space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHXOR6oZI9rsQS0B32HyTz9Y42upxCO4jWa74rZcoDYl-Kkoz5Mh0XLLoHTKs0JNWMZRyFmJpMl9n_sdrEt042I-4gqkbJyBp-DQ_5PYmHSePEjK5yYFzCNEISiCvcX9JA9X1zEsAo_mDssTDGqGbSPBcLOaycjspqH7VTaxv_Y6c3pjTWdx6BbPjoL7woMlAuV1PZgLdTHil_S2k684QJjZaW3E3b_WqvWNBZ6YZjo-UFUH7xIsB-2MaKSrsfbRQFC4TWM0Xj-m8"/>
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded text-xs font-bold uppercase tracking-wider">Disponible</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold mb-3">Talleres de confección</h3>
+<p class="text-on-surface-variant mb-6">Gestión de insumos, control de producción por etapas y seguimiento de pedidos personalizados.</p>
+<a class="text-primary font-semibold flex items-center gap-2 group/link" href="#">
+                            Saber más <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Secondary Cards column -->
+<div class="md:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-container-low p-8 rounded-xl flex-1 border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">build_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary-dim bg-secondary-container px-2 py-0.5 rounded">Próximamente</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Talleres de servicio técnico</h3>
+<p class="text-sm text-on-surface-variant">Órdenes de trabajo, inventario de repuestos y notificaciones automáticas a clientes.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex-1 border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">storefront</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary-dim bg-secondary-container px-2 py-0.5 rounded">Próximamente</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Pequeños comercios</h3>
+<p class="text-sm text-on-surface-variant">Punto de venta simplificado, control de stock y gestión de proveedores locales.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Syntelix (Vertical Editorial Authority) -->
+<section class="py-24 bg-white px-8" id="syntelix">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
+<div class="lg:w-1/3">
+<h2 class="text-4xl font-extrabold text-on-surface tracking-tighter leading-none mb-6">¿Por qué Syntelix?</h2>
+<p class="text-lg text-on-surface-variant">Nos enfocamos en la utilidad real sobre la estética superficial.</p>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+<div>
+<h4 class="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-4">01 / Empresa local</h4>
+<p class="text-on-surface font-medium leading-relaxed">Ubicados en Chile, entendemos las normativas locales y estamos en su misma zona horaria para cualquier requerimiento.</p>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-4">02 / Soporte real</h4>
+<p class="text-on-surface font-medium leading-relaxed">Si tiene un problema, habla con humanos. Soporte técnico directo sin tickets infinitos ni bots de respuesta.</p>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-4">03 / Cero frustración</h4>
+<p class="text-on-surface font-medium leading-relaxed">Sistemas diseñados para que sus colaboradores los amen, no para que luchen contra ellos.</p>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-4">04 / Propiedad del código</h4>
+<p class="text-on-surface font-medium leading-relaxed">Su sistema es su activo. Sin pagos de licencias abusivas por usuario o funciones ocultas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-8 mb-12" id="contacto">
+<div class="max-w-5xl mx-auto bg-primary rounded-xl p-12 lg:p-20 text-center relative overflow-hidden shadow-2xl">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+<div class="relative z-10">
+<h2 class="text-4xl lg:text-5xl font-bold text-on-primary tracking-tight mb-8">¿Listo para ordenar su negocio?</h2>
+<p class="text-primary-container text-xl mb-12 max-w-2xl mx-auto opacity-90">Hablemos hoy mismo y descubra cómo un sistema a medida puede transformar su operación diaria.</p>
+<a class="inline-flex items-center gap-3 bg-on-primary text-primary px-10 py-5 rounded-DEFAULT font-bold text-lg hover:bg-primary-container transition-all shadow-lg hover:-translate-y-1" href="https://wa.me/+56979961713">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                    Contactar por WhatsApp
+                </a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto w-full gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-bold text-blue-900 dark:text-slate-100">Syntelix</span>
+<span class="text-sm font-normal text-slate-500 dark:text-slate-400">© 2026 Syntelix. All rights reserved.</span>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">GitHub</a>
+</div>
+</div>
+</footer>
+</body></html>
