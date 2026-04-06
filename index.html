@@ -7,7 +7,13 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Syntelix — Sistemas de gestión para tu negocio</title>
+<meta name="description" content="Desarrollamos sistemas de gestión diseñados para pequeñas y medianas empresas chilenas. Sin complicaciones, sin tecnicismos — solo orden y control."/>
+<meta name="keywords" content="sistemas de gestión, software pymes, desarrollo a medida, Chile, talleres, pequeñas empresas"/>
+<meta property="og:title" content="Syntelix — Sistemas de gestión para tu negocio"/>
+<meta property="og:description" content="Desarrollamos sistemas de gestión diseñados para la realidad de las pequeñas y medianas empresas. Sin complicaciones, solo orden y control."/>
+<meta property="og:url" content="https://syntelix.cl"/>
+<meta property="og:type" content="website"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
       tailwind.config = {
@@ -96,20 +102,80 @@
 </head>
 <body class="bg-surface text-on-surface antialiased">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 glass-nav">
-<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
-<div class="text-xl font-semibold tracking-tighter text-blue-900">Syntelix</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-blue-700 font-medium border-b-2 border-blue-700 pb-1" href="#soluciones">Solutions</a>
-<a class="text-slate-600 hover:text-blue-900 transition-colors" href="#metodologia">Methodology</a>
-<a class="text-slate-600 hover:text-blue-900 transition-colors" href="#">Systems</a>
-<a class="text-slate-600 hover:text-blue-900 transition-colors" href="#syntelix">About</a>
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/20">
+<div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
+  <!-- Logo -->
+  <a href="#" class="text-xl font-semibold tracking-tighter text-blue-900">Syntelix</a>
+
+  <!-- Desktop links -->
+  <div class="hidden md:flex items-center gap-8">
+    <a class="text-slate-600 hover:text-blue-900 transition-colors" href="#soluciones">Soluciones</a>
+    <a class="text-slate-600 hover:text-blue-900 transition-colors" href="#metodologia">Metodología</a>
+    <a class="text-slate-600 hover:text-blue-900 transition-colors" href="#sistemas">Sistemas</a>
+    <a class="text-slate-600 hover:text-blue-900 transition-colors" href="#syntelix">Nosotros</a>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <button onclick="location.href='#contacto'" class="hidden md:block bg-primary text-on-primary px-5 py-2.5 rounded-DEFAULT font-medium text-sm transition-all hover:brightness-110">
+      Contacto
+    </button>
+    <!-- Hamburger button (mobile only) -->
+    <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-surface-container transition-colors" aria-label="Abrir menú">
+      <span id="bar1" class="block w-5 h-0.5 bg-blue-900 transition-all duration-300 origin-center"></span>
+      <span id="bar2" class="block w-5 h-0.5 bg-blue-900 transition-all duration-300"></span>
+      <span id="bar3" class="block w-5 h-0.5 bg-blue-900 transition-all duration-300 origin-center"></span>
+    </button>
+  </div>
 </div>
-<button onclick="location.href='#contacto'" class="bg-primary text-on-primary px-5 py-2.5 rounded-DEFAULT font-medium text-sm transition-transform scale-95 active:opacity-80">
-                Contacto
-            </button>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="md:hidden hidden px-6 pb-6 pt-2">
+  <div class="flex flex-col gap-1">
+    <a href="#soluciones" class="mobile-link text-blue-900 font-medium py-3 px-4 rounded-lg hover:bg-surface-container transition-colors">Soluciones</a>
+    <a href="#metodologia" class="mobile-link text-blue-900 font-medium py-3 px-4 rounded-lg hover:bg-surface-container transition-colors">Metodología</a>
+    <a href="#sistemas" class="mobile-link text-blue-900 font-medium py-3 px-4 rounded-lg hover:bg-surface-container transition-colors">Sistemas</a>
+    <a href="#syntelix" class="mobile-link text-blue-900 font-medium py-3 px-4 rounded-lg hover:bg-surface-container transition-colors">Nosotros</a>
+    <div class="pt-3 mt-2 border-t border-outline-variant/30">
+      <a href="#contacto" class="mobile-link block text-center bg-primary text-on-primary px-5 py-3 rounded-DEFAULT font-medium text-sm transition-all hover:brightness-110">
+        Contacto
+      </a>
+    </div>
+  </div>
 </div>
 </nav>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+
+  btn.addEventListener('click', () => {
+    const isOpen = !menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    // Animate to X
+    if (!isOpen) {
+      bar1.style.transform = 'translateY(8px) rotate(45deg)';
+      bar2.style.opacity = '0';
+      bar3.style.transform = 'translateY(-8px) rotate(-45deg)';
+    } else {
+      bar1.style.transform = '';
+      bar2.style.opacity = '1';
+      bar3.style.transform = '';
+    }
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      bar1.style.transform = '';
+      bar2.style.opacity = '1';
+      bar3.style.transform = '';
+    });
+  });
+</script>
 <!-- Hero Section -->
 <section class="pt-32 pb-20 px-8">
 <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -131,8 +197,8 @@
 </div>
 </div>
 <div class="lg:col-span-5 relative">
-<div class="aspect-square bg-surface-container rounded-xl overflow-hidden shadow-2xl relative z-10">
-<img class="w-full h-full object-cover opacity-90" data-alt="Modern minimalist office workspace with high-end laptop showing clean data dashboard in soft daylight with blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN63u_obkNVAIwJMPKcvBpIswTtmYO37dZly79m9rk8euoQyuPmPfxL6dj0SauGzJhxY21o2PSiyInqSTcZ5C4FFzMysUirhP2UuMqLhUxuo3PagnNNI7pT-TxfvZ9xWD1Ep9OMNBsExQ103G8ZUjNFfQLEBzi43hi5rnMA9brtc3QJWgEPu8wyL9X0t3uJfHvV3MamibRoR5Skyz0yjPIJAgwSsNArUwOuFqBjPoROxNhPIR9l_VJy2abfhsxUGpOvcQkYR4J8UU"/>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" alt="Trabajador de taller usando laptop para gestionar su negocio" src="assets/hero.jpg"/>
 </div>
 <!-- Decorative element -->
 <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-primary-container/30 rounded-xl -z-10 blur-2xl"></div>
@@ -217,7 +283,7 @@
 </div>
 </section>
 <!-- Systems Section (Bento-ish Grid) -->
-<section class="py-24 px-8">
+<section class="py-24 px-8" id="sistemas">
 <div class="max-w-7xl mx-auto">
 <div class="flex justify-between items-end mb-16">
 <div>
@@ -229,7 +295,7 @@
 <!-- Featured Card -->
 <div class="md:col-span-7 bg-surface-container-lowest rounded-xl overflow-hidden group shadow-sm">
 <div class="aspect-[16/9] relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional sewing workshop with organized fabric rolls and modern equipment in a bright industrial studio space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHXOR6oZI9rsQS0B32HyTz9Y42upxCO4jWa74rZcoDYl-Kkoz5Mh0XLLoHTKs0JNWMZRyFmJpMl9n_sdrEt042I-4gqkbJyBp-DQ_5PYmHSePEjK5yYFzCNEISiCvcX9JA9X1zEsAo_mDssTDGqGbSPBcLOaycjspqH7VTaxv_Y6c3pjTWdx6BbPjoL7woMlAuV1PZgLdTHil_S2k684QJjZaW3E3b_WqvWNBZ6YZjo-UFUH7xIsB-2MaKSrsfbRQFC4TWM0Xj-m8"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Trabajadora en taller de confección" src="assets/taller-confeccion.jpg"/>
 <div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded text-xs font-bold uppercase tracking-wider">Disponible</div>
 </div>
 <div class="p-8">
@@ -308,11 +374,11 @@
 <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto w-full gap-6">
 <div class="flex flex-col gap-2">
 <span class="text-lg font-bold text-blue-900 dark:text-slate-100">Syntelix</span>
-<span class="text-sm font-normal text-slate-500 dark:text-slate-400">© 2026 Syntelix. All rights reserved.</span>
+<span class="text-sm font-normal text-slate-500 dark:text-slate-400">© 2026 Syntelix. Todos los derechos reservados.</span>
 </div>
 <div class="flex gap-8">
-<a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">Privacy Policy</a>
-<a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">Política de privacidad</a>
+<a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">Términos de servicio</a>
 <a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">LinkedIn</a>
 <a class="text-slate-500 hover:text-blue-600 underline-offset-4 hover:underline" href="#">GitHub</a>
 </div>
