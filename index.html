@@ -384,4 +384,23 @@
 </div>
 </div>
 </footer>
+<!-- Botón volver arriba -->
+<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+  class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:brightness-110 hover:-translate-y-1">
+  <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
+<script>
+  const backToTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.remove('opacity-0', 'pointer-events-none');
+      backToTop.classList.add('opacity-100');
+    } else {
+      backToTop.classList.add('opacity-0', 'pointer-events-none');
+      backToTop.classList.remove('opacity-100');
+    }
+  });
+</script>
+
 </body></html>
